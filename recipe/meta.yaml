@@ -15,6 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,7 +35,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base
+    - r-base >=4.2.0
     - r-fnn
     - r-mcmcpack
     - r-rcpp
@@ -47,7 +48,7 @@ requirements:
     - r-rlang
     - r-salso
   run:
-    - r-base
+    - r-base >=4.2.0
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-mcmcpack
