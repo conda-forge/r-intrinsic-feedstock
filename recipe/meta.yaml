@@ -35,7 +35,7 @@ requirements:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
-    - r-base >=4.2.0
+    - r-base
     - r-fnn
     - r-mcmcpack
     - r-rcpp
@@ -48,7 +48,7 @@ requirements:
     - r-rlang
     - r-salso
   run:
-    - r-base >=4.2.0
+    - r-base
     - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-mcmcpack
