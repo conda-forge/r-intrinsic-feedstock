@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/intRinsic_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/intRinsic/intRinsic_{{ version }}.tar.gz
-  sha256: 966ecf3aff8196a7938cc0fcaac3e16f27e859e7a1931535666bae22aea4dd78
+  sha256: 37c879eed1d73a8665bc3901d4e357671851cae1979437e2def722210207a44f
 
 build:
   merge_build_host: true  # [win]
