@@ -3,6 +3,7 @@ About r-intrinsic-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-intrinsic-feedstock/blob/main/LICENSE.txt)
 
+
 About r-intrinsic
 -----------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/Fradenti/intRinsic
 Package license: MIT
 
 Summary: Provides functions to estimate the intrinsic dimension of a dataset via likelihood-based approaches. Specifically, the package implements the 'TWO-NN' and 'Gride' estimators and the 'Hidalgo' Bayesian mixture model. In addition, the first reference contains an extended vignette on the usage of the 'TWO-NN' and 'Hidalgo' models. References: Denti (2022+, <arXiv:2102.11425>); Allegra et al. (2020, <doi:10.1038/s41598-020-72222-0>); Denti et al. (2022, <doi:10.1038/s41598-022-20991-1>); Facco et al. (2017, <doi:10.1038/s41598-017-11873-y>); Santos-Fernandez et al. (2021, <doi:10.1038/s41598-022-20991-1>).
+
 About r-intrinsic
 -----------------
 
@@ -146,7 +148,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance

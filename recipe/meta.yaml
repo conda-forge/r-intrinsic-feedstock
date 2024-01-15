@@ -1,4 +1,4 @@
-{% set version = "1.0.1" %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/intRinsic_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/intRinsic/intRinsic_{{ version }}.tar.gz
-  sha256: 37c879eed1d73a8665bc3901d4e357671851cae1979437e2def722210207a44f
+  sha256: 2dfac6fb9303c8e094f6630572a93d7168ab416079cdfe3fc638ffb6b30e1a1e
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   skip: true  # [win or r_base=="4.1"]
   rpaths:
     - lib/R/lib/
@@ -70,8 +70,8 @@ test:
 about:
   home: https://github.com/Fradenti/intRinsic
   license: MIT
-  summary: "Provides functions to estimate the intrinsic dimension of a dataset via likelihood-based approaches. Specifically, the package implements the 'TWO-NN' and 'Gride' estimators and the 'Hidalgo' Bayesian mixture model. In addition, the first reference contains an extended vignette on the usage of the 'TWO-NN' and\
-    \ 'Hidalgo' models. References: Denti (2022+, <arXiv:2102.11425>); Allegra et al. (2020, <doi:10.1038/s41598-020-72222-0>); Denti et al. (2022, <doi:10.1038/s41598-022-20991-1>); Facco et al. (2017, <doi:10.1038/s41598-017-11873-y>); Santos-Fernandez et al. (2021, <doi:10.1038/s41598-022-20991-1>)."
+  summary: "Provides functions to estimate the intrinsic dimension of a dataset via likelihood-based approaches. Specifically, the package implements the 'TWO-NN' and 'Gride' estimators and the 'Hidalgo' Bayesian mixture model. In addition, the first reference contains an extended vignette on the usage of the 'TWO-NN' and
+    'Hidalgo' models. References: Denti (2022+, <arXiv:2102.11425>); Allegra et al. (2020, <doi:10.1038/s41598-020-72222-0>); Denti et al. (2022, <doi:10.1038/s41598-022-20991-1>); Facco et al. (2017, <doi:10.1038/s41598-017-11873-y>); Santos-Fernandez et al. (2021, <doi:10.1038/s41598-022-20991-1>)."
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
