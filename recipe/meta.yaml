@@ -1,6 +1,5 @@
 {% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-intrinsic
@@ -13,8 +12,7 @@ source:
   sha256: 2dfac6fb9303c8e094f6630572a93d7168ab416079cdfe3fc638ffb6b30e1a1e
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   skip: true  # [win or r_base=="4.1"]
   rpaths:
     - lib/R/lib/
@@ -25,7 +23,9 @@ requirements:
     - llvm-openmp  # [osx]
     - libgomp      # [linux]
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -49,7 +49,6 @@ requirements:
     - r-salso
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-fnn
     - r-mcmcpack
     - r-rcpp
