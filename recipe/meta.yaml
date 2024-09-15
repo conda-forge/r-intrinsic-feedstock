@@ -1,4 +1,4 @@
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/intRinsic_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/intRinsic/intRinsic_{{ version }}.tar.gz
-  sha256: 2dfac6fb9303c8e094f6630572a93d7168ab416079cdfe3fc638ffb6b30e1a1e
+  sha256: 4c257a1b080a97448eef5aa5c9767bf08834c56969544d83e1337c0ed61777da
 
 build:
-  number: 1
-  skip: true  # [win or r_base=="4.1"]
+  number: 0
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +37,6 @@ requirements:
   host:
     - r-base
     - r-fnn
-    - r-mcmcpack
     - r-rcpp
     - r-rcpparmadillo
     - r-dplyr
@@ -50,7 +49,6 @@ requirements:
   run:
     - r-base
     - r-fnn
-    - r-mcmcpack
     - r-rcpp
     - r-rcpparmadillo
     - r-dplyr
