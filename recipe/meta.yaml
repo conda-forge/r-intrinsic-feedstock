@@ -13,7 +13,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win or r_base=="4.1"]
+  skip: true  # [win]
   rpaths:
     - lib/R/lib/
     - lib/
@@ -37,7 +37,6 @@ requirements:
   host:
     - r-base
     - r-fnn
-    - r-mcmcpack
     - r-rcpp
     - r-rcpparmadillo
     - r-dplyr
@@ -50,7 +49,6 @@ requirements:
   run:
     - r-base
     - r-fnn
-    - r-mcmcpack
     - r-rcpp
     - r-rcpparmadillo
     - r-dplyr
